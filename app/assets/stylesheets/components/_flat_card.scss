@@ -1,0 +1,18 @@
+.flat-card {
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.14);
+  border-radius: 2px;
+}
+
+.flat-card-img {
+  height: 180px;
+  background-image: url("https://picsum.photos/500");
+  background-size: cover;
+  background-position: center;
+}
+
+.flat-card-content {
+  background-color: #F8F9FA;
+  height: 190px;
+  position: relative;
+}
