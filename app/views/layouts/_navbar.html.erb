@@ -1,4 +1,10 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light justify-content-between px-3">
   <%= link_to  "Simple Airbnb", flats_path, class: "navbar-brand" %>
-  <%= link_to  "Add Flat", new_flat_path, class: "btn btn-outline-primary my-2" %>
+
+  <%= simple_form_for :search, url: flats_path, method: :get, wrapper: :inline_form, html: { class: 'form-inline row row-cols-lg-auto g-3 align-items-center mr-2', style:"margin-left: auto" } do |f| %>
+    <%= f.input :q, label: false %>   
+    <%= f.submit "Search", class: "btn btn-success" %>
+  <% end %>
+
+  <%= link_to  "Add Flat", new_flat_path, class: "btn btn-outline-primary my-2", style: "margin-left: 16px;" %>
 </nav>

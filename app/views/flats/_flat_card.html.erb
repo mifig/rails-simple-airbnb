@@ -1,5 +1,5 @@
 <div class="flat-card mb-4">
-  <div class="flat-card-img">
+  <div class="flat-card-img" style="background-image: url('<%= flat.flat_img %>')">
   </div>
   <div class="flat-card-content p-3 position-relative">
     <h4><%= flat.name %></h4>
@@ -15,5 +15,7 @@
   </div>
   <div class="flat-card-action p-3 border-top">
     <%= link_to "More info", flat_path(flat), class: "text-decoration-none" %>
+    <%= link_to "Edit", edit_flat_path(flat), class: "text-decoration-none", style: "color:#FFC007;" %>
+    <%= link_to "Remove", flat_path(flat), method: :delete, class: "text-decoration-none", style: "color:#E14E5A;", :data => {:confirm => 'Are you sure?'} %>
   </div>
 </div>
